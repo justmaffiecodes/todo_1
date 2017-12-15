@@ -2,6 +2,8 @@
 
 Hey, this is a basic Todo list created with [ReactJS](https://reactjs.org), this is a basic todo application, it does not store the data.
 
+## Credits
+- @untocodes (Finnish Translation)
 
 ## Installation
 1. ``git clone https://github.com/JustMaffieCodes/todo_1``
