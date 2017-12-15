@@ -3,16 +3,42 @@ import { Table } from 'semantic-ui-react';
 import { NewEntryInput } from './Inputs';
 import TodoEntry from './TodoEntry';
 import {FormattedMessage} from 'react-intl';
+import LanguageSelector from './LanguageSelector'
   
 class TodoList extends Component {
     constructor(props) {
       super(props)
       var todo_entries = new Map()
-      this.state={todo_entries:todo_entries}
+      this.load = this.load.bind(this)      
+      this.state={todo_entries:this.load(todo_entries)}
       this.removeEntry = this.removeEntry.bind(this)
       this.addEntry = this.addEntry.bind(this)
       this.render = this.render.bind(this)
       this.modifyEntry = this.modifyEntry.bind(this)
+      this.shouldSave = false;
+    }
+
+    load(todo_entries){
+      var data = []
+      if(localStorage.getItem("todo") !== null){
+        data = JSON.parse(localStorage.getItem("todo")).data
+      }
+      for(var entry in data){
+        entry = data[entry]
+        if(entry.finished === null){
+          entry.finished = false;
+        }
+        todo_entries.set(entry.key, entry)
+      }
+      return todo_entries
+    }
+
+    save(){
+      var f = Array.from(this.state.todo_entries.values())
+      var data = JSON.stringify({data:f});
+      console.log(data)
+      console.log(f)
+      localStorage.setItem("todo", data)
     }
   
     addEntry(entry){
@@ -20,6 +46,7 @@ class TodoList extends Component {
       if(entry.finished === null){
         entry.finished = false;
       }
+      entry.key = key
       var entries = new Map();
       entries.set(key, entry)
       this.setState({todo_entries:entries})
@@ -43,11 +70,18 @@ class TodoList extends Component {
     }
   
     render () {
+      if(this.shouldSave){
+        this.save()
+      }
+      this.shouldSave = true;
       var removeEntry = this.removeEntry
       var modifyEntry = this.modifyEntry
       var entries = Array.from(this.state.todo_entries.entries())
       return (
         <div className="todoList">
+          <LanguageSelector />
+          <br />
+          <br />
           <Table color="red">
             <Table.Header>
               <Table.Row>
