@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Table } from 'semantic-ui-react';
 import {DeleteButton, FinishButton} from './Buttons';
-// import FinishButton from './FinishButton'
-  
+import {FormattedMessage} from 'react-intl';
+
 class TodoEntry extends Component{
   constructor(props){
     super(props)
@@ -26,7 +26,7 @@ class TodoEntry extends Component{
           {this.props.entry.name}
         </Table.Cell>
         <Table.Cell>
-          {this.props.entry.finished ? "Yes" : "No"}
+          {this.props.entry.finished ? <FormattedMessage id="TodoEntry.Yes" defaultMessage="Yes" /> : <FormattedMessage id="TodoEntry.No" defaultMessage="No" />}
         </Table.Cell>
         <Table.Cell>
           {this.props.entry.description}

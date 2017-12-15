@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Icon, Modal, Form,  } from 'semantic-ui-react'
+import {FormattedMessage} from 'react-intl';
 
 class NewEntryInput extends Component{
     constructor() {
@@ -37,17 +38,17 @@ class NewEntryInput extends Component{
           <center><Button color="green" onClick={onClick}><center><Icon name="add circle" color="black" inverted={true}/></center></Button></center>
           <Modal open={this.state.modalOpen} onClose={()=>{this.setState({modalOpen:false})}} closeIcon>
               <Modal.Header>
-                  Add New Todo Entry
+                 <FormattedMessage id="Inputs.NewTodoEntry" defaultMessage="Add New Todo Entry" />
               </Modal.Header>
               <Modal.Content>
                 <Form onSubmit={handleSubmit}>
                     <Form.Field>
-                    <Form.Input type='text' name='name' label="name" placeholder="Name" onChange={onChange} value={this.state.formData.name}/>
+                      <Form.Input type='text' name='name' label={<FormattedMessage id='Inputs.Name' defaultMessage="Name" />} onChange={onChange} value={this.state.formData.name}/>
                     </Form.Field>
                     <Form.Field>
-                    <Form.Input type='text' name='description' label="description" placeholder="Description" onChange={onChange} value={this.state.formData.description}/>
+                    <Form.Input type='text' name='description' label={<FormattedMessage id='Inputs.Description' defaultMessage="Description" />} onChange={onChange} value={this.state.formData.description}/>
                     </Form.Field>
-                    <Button primary type='submit'>Submit</Button>
+                    <Button primary type='submit'>{<FormattedMessage id='Inputs.Submit' defaultMessage="Submit" />}</Button>
                 </Form>
               </Modal.Content>
           </Modal>

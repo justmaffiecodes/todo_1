@@ -53,7 +53,7 @@ class TodoList extends Component {
               <Table.Row>
                 <Table.HeaderCell><FormattedMessage id="TodoList.Name" defaultMessage="Name" /></Table.HeaderCell>
                 <Table.HeaderCell><FormattedMessage id="TodoList.Finished" defaultMessage="Finished" /></Table.HeaderCell>
-                <Table.HeaderCell><FormattedMessage id="TodoList.Description" /></Table.HeaderCell>
+                <Table.HeaderCell><FormattedMessage id="TodoList.Description" defaultMessage="Description" /></Table.HeaderCell>
                 <Table.HeaderCell></Table.HeaderCell>
               </Table.Row>
             </Table.Header>
