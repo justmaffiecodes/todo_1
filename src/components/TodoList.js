@@ -85,7 +85,7 @@ class TodoList extends Component {
           <Table color="red">
             <Table.Header>
               <Table.Row>
-                <Table.HeaderCell><FormattedMessage id="TodoList.Name" defaultMessage="Name" /></Table.HeaderCell>
+                <Table.HeaderCell><FormattedMessage id="TodoList.Name" defaultMessage="f" /></Table.HeaderCell>
                 <Table.HeaderCell><FormattedMessage id="TodoList.Finished" defaultMessage="Finished" /></Table.HeaderCell>
                 <Table.HeaderCell><FormattedMessage id="TodoList.Description" defaultMessage="Description" /></Table.HeaderCell>
                 <Table.HeaderCell></Table.HeaderCell>
