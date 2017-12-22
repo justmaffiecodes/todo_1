@@ -9,6 +9,7 @@ function add_lang(lang, text){
 add_lang("en","English")
 add_lang("nl","Dutch")
 add_lang("fi","Finnish")
+add_lang("tr","Turkish")
 add_lang("af","African")
 add_lang("ar","Arabic")
 add_lang("ca","Catalan")
@@ -30,7 +31,6 @@ add_lang("sr","Serbian")
 add_lang("so","Somali")
 add_lang("es-ES","Spanish")
 add_lang("sv-SE","Swedish")
-add_lang("tr","Turkish")
 add_lang("uk","Ukrainian")
 add_lang("vi","Vietnamese")
 
@@ -59,7 +59,7 @@ class LanguageSelector extends Component {
         className='icon'
         floating
         labeled
-        scrolling
+        scrolling   
         icon='world'
         options={values(languages)}
         defaultValue={this.props.language}
