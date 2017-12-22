@@ -13,7 +13,7 @@ class App extends Component {
         <br />
         <br />
         <br />
-        <TodoList />
+        <TodoList {...this.props}/>
       </Container>
     );
   }

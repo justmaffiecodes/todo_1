@@ -4,6 +4,7 @@ Hey, this is a basic Todo list created with [ReactJS](https://reactjs.org), this
 
 ## Credits
 - @untocodes (Finnish Translation)
+- @Escron (Turkish Translation)
 
 ## Installation
 1. ``git clone https://github.com/JustMaffieCodes/todo_1``

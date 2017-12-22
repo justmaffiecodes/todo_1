@@ -3,7 +3,7 @@ import { Table } from 'semantic-ui-react';
 import { NewEntryInput } from './Inputs';
 import TodoEntry from './TodoEntry';
 import {FormattedMessage} from 'react-intl';
-import LanguageSelector from './LanguageSelector'
+import {LanguageSelector} from './LanguageSelector'
   
 class TodoList extends Component {
     constructor(props) {
@@ -79,13 +79,13 @@ class TodoList extends Component {
       var entries = Array.from(this.state.todo_entries.entries())
       return (
         <div className="todoList">
-          <LanguageSelector />
+          <LanguageSelector language={this.props.language}/>
           <br />
           <br />
           <Table color="red">
             <Table.Header>
               <Table.Row>
-                <Table.HeaderCell><FormattedMessage id="TodoList.Name" defaultMessage="f" /></Table.HeaderCell>
+                <Table.HeaderCell><FormattedMessage id="TodoList.Name" defaultMessage="Name" /></Table.HeaderCell>
                 <Table.HeaderCell><FormattedMessage id="TodoList.Finished" defaultMessage="Finished" /></Table.HeaderCell>
                 <Table.HeaderCell><FormattedMessage id="TodoList.Description" defaultMessage="Description" /></Table.HeaderCell>
                 <Table.HeaderCell></Table.HeaderCell>
