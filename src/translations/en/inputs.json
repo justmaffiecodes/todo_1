@@ -1,6 +1,6 @@
 {
-    "Inputs.Name": "",
-    "Inputs.Description": "",
-    "Inputs.Submit": "",
-    "Inputs.NewTodoEntry": ""
+    "Inputs.Name": "Name",
+    "Inputs.Description": "Description",
+    "Inputs.Submit": "Submit",
+    "Inputs.NewTodoEntry": "Add New Todo Entry"
 }
