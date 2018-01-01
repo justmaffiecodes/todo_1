@@ -1,5 +1,5 @@
 {
-    "TodoList.Name": "",
-    "TodoList.Finished": "",
-    "TodoList.Description": ""
+    "TodoList.Name": "Name",
+    "TodoList.Finished": "Fertig",
+    "TodoList.Description": "Beschreibung"
 }
